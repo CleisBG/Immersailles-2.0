@@ -13,7 +13,7 @@ session_start ();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="Css/style.css">
 
 <!-- Pour la Carte -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
@@ -94,7 +94,7 @@ session_start ();
 	var kruegerZ = xy( 13.4,  56.5);
 	var deneb    = xy(218.7,   8.3);
 
-	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<a href="Louis14.html"><img src="Louis.jpg" class="card-img" style="width:30px" alt="logo"></a>');
+	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<a href="OH/Louis14.html"><img src="OH/Louis.jpg" class="card-img" style="width:30px" alt="logo"></a>');
 	L.marker(   mizar, {icon: greenIcon}).addTo(map).bindPopup(    'Mizar');
 	L.marker(kruegerZ, {icon: greenIcon}).addTo(map).bindPopup('Krueger-Z');
 	L.marker(   deneb, {icon: greenIcon}).addTo(map).bindPopup(    'Deneb');
