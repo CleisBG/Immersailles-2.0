@@ -43,7 +43,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>Connexion</title>
 </head>
 <body>
@@ -89,28 +89,31 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
     </div>
 
 
+    <div class="baspage">
     <footer class="w-100 bg-dark text-white">
-            <div class="container" >
-                <div class="row">
-                  <div1 class="col-sm">Crédits</div1>
-                  <div1 class="col-sm">Mentions Légales</div1>
-                  <div1 class="col-sm"><a class="text-warning" href="ensavoirplus.html">En savoir plus</a></div1>
-                </div>
-                <div class="row">
-                    <div class="col-sm">blabla</div>
-                    <div class="col-sm">blablabla</div>
-                    <div class="col-sm"><a class="text-white" href="https://bitbucket.org/EdetRo/immersailles/src/master/">Lien Git</a></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm"></div>
-                    <div class="col-sm"></div>
-                    <div class="col-sm">blabla</div>
-                  </div>
-              </div>
-              <div>
-                <p style="text-align: center;">Copyright © 2020 x Inc. Tous droits réservés</p>
-              </div>
+    				<div class="container" >
+
+    						<div class="row">
+    							<div class="col-sm">Crédits</div>
+    							<div class="col-sm">Mentions Légales</div>
+    							<div class="col-sm"><a class="text-warning" href="ensavoirplus.html">En savoir plus</a></div>
+    						</div>
+    						<div class="row">
+    								<div class="col-sm">blabla</div>
+    								<div class="col-sm">blablabla</div>
+    								<div class="col-sm"><a class="text-white" href="https://github.com/CleisBG/Immersailles-2.0.git">Lien Git</a></div>
+    							</div>
+    							<div class="row">
+    								<div class="col-sm"></div>
+    								<div class="col-sm"></div>
+    								<div class="col-sm">blabla</div>
+    							</div>
+    					</div>
+    					<div>
+    						<p style="text-align: center;">Copyright © 2020 x Inc. Tous droits réservés</p>
+    					</div>
     </footer>
+    </div>
 
 
     <!-- Optional JavaScript -->
