@@ -104,7 +104,6 @@ session_start ();
 	map.setView(xy(120, 70), -3);
 
 </script>
-open data
 
 <div class="baspage">
 <footer class="w-100 bg-dark text-white">
