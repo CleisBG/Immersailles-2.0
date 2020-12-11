@@ -8,18 +8,33 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
 
   if (!(empty($login)) && !(empty($mdp))) {
 
-    $results=$dbh->query("SELECT username,motDePasse FROM `Profil` WHERE username = '$login' AND motDePasse = '$mdp'");
+// identifiants administrateur
+    $results_admin=$dbh->query("SELECT `username`, `motDePasse` FROM `profil` p, `administrateur` a WHERE p.idProfil = a.idProfil");
 
-    $ligne = $results->fetch();
-    $login_valide = $ligne['username'];
-    $pwd_valide = $ligne['motDePasse'];
+    $ligne_admin = $results_admin->fetch();
+    $login_admin = $ligne_admin['username'];
+    $pwd_admin = $ligne_admin['motDePasse'];
 
-    if ($login_valide == $login && $pwd_valide == $mdp) {
+// identifiants contributeur
+    $results_contrib=$dbh->query("SELECT `username`, `motDePasse` FROM `profil` p, `contributeur` c WHERE p.idProfil = c.idProfil");
 
+    $ligne_contrib = $results_contrib->fetch();
+    $login_contrib = $ligne_contrib['username'];
+    $pwd_contrib = $ligne_contrib['motDePasse'];
+
+    if ($login_admin == $login && $pwd_admin == $mdp) {
+      // test administrateur
       $_SESSION['login'] = $login;
       $_SESSION['pwd'] = $mdp;
 
       header('location: Admin/accueilAdmin.php');
+    }
+    elseif ($login_contrib == $login && $pwd_contrib == $mdp) {
+      // test contributeur
+      $_SESSION['login'] = $login;
+      $_SESSION['pwd'] = $mdp;
+
+      header('location: Contributeur/accueilContributeur.php');
     }
     else {
       echo '<body onLoad="alert(\'Identifiants incorrects\')">';
