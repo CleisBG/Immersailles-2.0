@@ -69,7 +69,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
             <table>
               <tr>
                 <td>
-                  <a href="index.html"><img src="logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
+                  <a href="index2.php"><img src="logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
                 </td>
                 <td>
                   <p style="font-size:30px;">Immersailles</p>
@@ -87,16 +87,16 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
       </tr>
     </table>
 
-<div class="p-5">
+<div class="p-5" style="background-image: url('http://www.chateauversailles.fr/sites/default/files/styles/visuel_principal_home/public/visuels_principaux/accueil_tg_ete.jpg');">
     <table class="w-100">
-      <div class="container bg-dark text-white text-center" >
-        <fieldset>
+      <div class="container" >
+        <fieldset class="bg-dark text-white text-center">
           <p style="font-size:30px;">Connexion</p>
           <form action="" method="post">
             Login<br><input type="text" name="login" size="25"/><br><br>
             Mot de passe <br><input type="password" name="mdp" size="25"/><br><br><br>
-          <input class="boutonConnexion" type="reset" name="submit" value="Effacer" />
-          <input class="boutonConnexion" type="submit" name="submit" value="Envoyer" />
+            <button class="btn btn-outline-light" type="reset" name="submit">Effacer</button>
+          <input class="btn btn-outline-light" type="submit" name="submit" value="Envoyer" />
           </form>
         </fieldset>
         </div>

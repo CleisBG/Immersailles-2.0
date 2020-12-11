@@ -39,7 +39,7 @@ a{
   width: 400px;
 }
 
-/* .boutonAccueil {
+.boutonAccueil {
     border: 0;
     font-size: 20px;
     padding: 10px;
@@ -67,7 +67,7 @@ a{
 
 .boutonConnexion:hover {
     background-color: #006400;
-} */
+}
 
 .baspage{
   display: flex;
@@ -85,7 +85,7 @@ fieldset {
  height: auto;
  }
 
-/* .BarreNavig{
+.BarreNavig{
    display: flex;
    flex-direction: container;
    justify-content: space-around;
@@ -112,7 +112,7 @@ fieldset {
 .Rubrique:hover{
   background-color:#006400;
 
-} */
+}
 
 .contenu{
   display: none;

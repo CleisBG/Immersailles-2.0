@@ -15,7 +15,7 @@ if(!isset($_SESSION["login"])){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	  <link rel="stylesheet" href="ccs/style.css">
+	  <link rel="stylesheet" href="css/style.css">
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -61,7 +61,7 @@ if(!isset($_SESSION["login"])){
           <div class="col-sm">Gestion des niveaux associés à une "époque"</div>
         </div>
         <div class="row">
-          <a href="gestionMarkerAdmin.php"><div class="col-sm">Gestion des markers sur une map</div></a>
+          <a href="gestionMarkerContributeur.php"><div class="col-sm">Gestion des markers sur une map</div></a>
         </div>
         <div class="row">
           <div class="col-sm">Données ouvertes sur les markers :</div>
@@ -69,28 +69,30 @@ if(!isset($_SESSION["login"])){
     </div>
 
 
-<footer class="w-100 bg-dark text-white">
-        <div class="container" >
-            <div class="row">
-              <div1 class="col-sm">Crédits</div1>
-              <div1 class="col-sm">Mentions Légales</div1>
-              <div1 class="col-sm"><a class="text-warning" href="ensavoirplus.html">En savoir plus</a></div1>
-            </div>
-            <div class="row">
-                <div class="col-sm">blabla</div>
-                <div class="col-sm">blablabla</div>
-                <div class="col-sm"><a class="text-white" href="https://bitbucket.org/EdetRo/immersailles/src/master/">Lien Git</a></div>
+  <div class="baspage">
+    <footer class="w-100 bg-dark text-white">
+            <div class="container" >
+
+                <div class="row">
+                  <div class="col-sm">Crédits</div>
+                  <div class="col-sm">Mentions Légales</div>
+                  <div class="col-sm"><a class="text-warning" href="ensavoirplus.html">En savoir plus</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">blabla</div>
+                    <div class="col-sm">blablabla</div>
+                    <div class="col-sm"><a class="text-white" href="https://github.com/CleisBG/Immersailles-2.0.git">Lien Git</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm"></div>
+                    <div class="col-sm">blabla</div>
+                  </div>
               </div>
-              <div class="row">
-                <div class="col-sm"></div>
-                <div class="col-sm"></div>
-                <div class="col-sm">blabla</div>
+              <div>
+                <p style="text-align: center;">Copyright © 2020 x Inc. Tous droits réservés</p>
               </div>
-          </div>
-          <div>
-            <p style="text-align: center;">Copyright © 2020 x Inc. Tous droits réservés</p>
-          </div>
-</footer>
+
 
 </body>
 
