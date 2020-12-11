@@ -89,12 +89,12 @@ session_start ();
 	var bounds = [xy(0, 0), xy(6507, 2319)];
 	var image = L.imageOverlay('plan_versailles.png', bounds).addTo(map);
 
-	var sol      = xy(3253, 1756);
+	var louis14  = xy(3253, 1756);
 	var mizar    = xy( 41.6, 130.1);
 	var kruegerZ = xy( 13.4,  56.5);
 	var deneb    = xy(218.7,   8.3);
 
-	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<a href="OH/Louis14.html"><img src="OH/Louis.jpg" class="card-img" style="width:30px" alt="logo"></a>');
+	L.marker( louis14, {icon: greenIcon}).addTo(map).bindPopup('<a href="OH/Louis14.html"><img src="OH/Louis.jpg" class="card-img" style="width:30px" alt="logo"></a>');
 	L.marker(   mizar, {icon: greenIcon}).addTo(map).bindPopup(    'Mizar');
 	L.marker(kruegerZ, {icon: greenIcon}).addTo(map).bindPopup('Krueger-Z');
 	L.marker(   deneb, {icon: greenIcon}).addTo(map).bindPopup(    'Deneb');
