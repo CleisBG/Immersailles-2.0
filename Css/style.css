@@ -9,6 +9,16 @@ a{
   color: black ;
 }
 
+.horizontal div{
+  float: left;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
 .boutonAccueil {
     border: 0;
     font-size: 20px;
