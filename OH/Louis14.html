@@ -40,7 +40,6 @@
 <div style="background-image: url('http://www.chateauversailles.fr/sites/default/files/styles/visuel_principal_home/public/visuels_principaux/accueil_tg_ete.jpg');">
   <div class="container">
     <div class="row">
-
       <div1 class="col-sm"></br>
         <img id='image'>
       </div1>
@@ -53,9 +52,9 @@
               </tr>
               <tr class="bg-dark text-white">
                 <td>
+                  <p id='description'></p>
                   <p id='birth'></p>
                   <p id='death'></p>
-                  <p id='description'></p>
                 </td>
               </tr>
             </table>
@@ -111,7 +110,7 @@
         .then(data => data.json())
         .then(json => {
             const data = json.entities[idWiki];
-            name.innerText = "Nom: " + getName(data);
+            name.innerText = getName(data);
             birth.innerText = "Date de naissance: " + getBirth(data);
             death.innerText = "Date de décès: " +getDeath(data);
             description.innerText = getDescription(data);

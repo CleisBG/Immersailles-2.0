@@ -94,7 +94,7 @@ session_start ();
 	var kruegerZ = xy( 13.4,  56.5);
 	var deneb    = xy(218.7,   8.3);
 
-	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<a href="OH/Louis14.html"><img src="OH/Louis.jpg" class="card-img" style="width:30px" alt="logo"></a>');
+	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<a href="OH/Louis14.html"><img src="OH/Louis.jpg" class="card-img" style="width:30px" alt="logo">Louis14</a>');
 	L.marker(   mizar, {icon: greenIcon}).addTo(map).bindPopup(    'Mizar');
 	L.marker(kruegerZ, {icon: greenIcon}).addTo(map).bindPopup('Krueger-Z');
 	L.marker(   deneb, {icon: greenIcon}).addTo(map).bindPopup(    'Deneb');
