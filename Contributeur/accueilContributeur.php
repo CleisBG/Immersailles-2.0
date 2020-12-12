@@ -61,7 +61,7 @@ if(!isset($_SESSION["login"])){
           <div class="col-sm">Gestion des niveaux associés à une "époque"</div>
         </div>
         <div class="row">
-          <a href="gestionMarkerContributeur.php"><div class="col-sm">Gestion des markers sur une map</div></a>
+          <a href="markerContributeur.php"><div class="col-sm">Gestion des markers sur une map</div></a>
         </div>
         <div class="row">
           <div class="col-sm">Données ouvertes sur les markers :</div>
