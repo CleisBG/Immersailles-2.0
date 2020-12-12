@@ -31,7 +31,7 @@ if(!isset($_SESSION["login"])){
           <table>
             <tr>
               <td>
-                <a href="index.html"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
+                <a href="accueilContributeur"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
                 <p style="font-size:30px;">Immersailles</p>
@@ -43,7 +43,7 @@ if(!isset($_SESSION["login"])){
           <p style="font-size:18px;">A propos
             <img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo">
 
-            <img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo">
+            <a href="../index2.php"><img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>
@@ -52,7 +52,7 @@ if(!isset($_SESSION["login"])){
   <div class="container" >
       <div class="row">
         <div class="col-sm">Gérer les utilisateurs</div>
-        <div class="col-sm">Bonjour</div>
+        <div class="col-sm">Bonjour Contributeur</div>
       </div>
       <div class="row">
           <div class="col-sm">Gestion des "époques"/dates</div>

@@ -31,7 +31,7 @@ if(!isset($_SESSION["login"])){
           <table>
             <tr>
               <td>
-                <a href="index.html"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
+                <a href="accueilAdmin"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
                 <p style="font-size:30px;">Immersailles</p>
@@ -43,7 +43,7 @@ if(!isset($_SESSION["login"])){
           <p style="font-size:18px;">A propos
             <img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo">
 
-            <img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo">
+            <a href="../index2.php"><img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>
