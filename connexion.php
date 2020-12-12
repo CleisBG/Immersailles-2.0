@@ -52,7 +52,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" /> -->
   	<link rel="stylesheet" type="text/css" href="Css/style.css">
 
     <!-- Bootstrap CSS -->
@@ -79,9 +79,9 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
           </td>
           <td class = "text-right">
             <p style="font-size:18px;">A propos
-              <img src="rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo">
+              <img src="login.png" class="card-img" style="width:50px" alt="logo">
 
-              <img src="rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo">
+              <img src="logout.png" class="card-img" style="width:50px" alt="logo">
             </p>
           </td>
       </tr>
@@ -104,7 +104,6 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
     </div>
 
 
-    <div class="baspage">
     <footer class="w-100 bg-dark text-white">
     				<div class="container" >
 
@@ -128,7 +127,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
     						<p style="text-align: center;">Copyright © 2020 x Inc. Tous droits réservés</p>
     					</div>
     </footer>
-    </div>
+
 
 
     <!-- Optional JavaScript -->

@@ -15,7 +15,7 @@ if(!isset($_SESSION["login"])){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	  <link rel="stylesheet" href="css/style.css">
+	  <link rel="stylesheet" href="Css/style.css">
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -34,16 +34,16 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilContributeur"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Immersailles</p>
+                <p style="font-size:30px;">Contributeur</p>
               </td>
             </tr>
         </table>
         </td>
         <td class = "text-right">
           <p style="font-size:18px;">A propos
-            <img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo">
+            <img src="../login.png" class="card-img" style="width:50px" alt="logo">
 
-            <a href="../index2.php"><img src="../rond-titre-blanc.png" class="card-img" style="width:50px" alt="logo"></a>
+            <a href="../index2.php"><img src="../logout.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>
@@ -76,7 +76,7 @@ if(!isset($_SESSION["login"])){
                 <div class="row">
                   <div class="col-sm">Crédits</div>
                   <div class="col-sm">Mentions Légales</div>
-                  <div class="col-sm"><a class="text-warning" href="ensavoirplus.html">En savoir plus</a></div>
+                  <div class="col-sm"><a class="text-warning" href="../ensavoirplus.html">En savoir plus</a></div>
                 </div>
                 <div class="row">
                     <div class="col-sm">blabla</div>
