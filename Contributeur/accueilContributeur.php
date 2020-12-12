@@ -31,7 +31,7 @@ if(!isset($_SESSION["login"])){
           <table>
             <tr>
               <td>
-                <a href="accueilContributeur"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
+                <a href="accueilContributeur"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
                 <p style="font-size:30px;">Contributeur</p>
@@ -41,9 +41,9 @@ if(!isset($_SESSION["login"])){
         </td>
         <td class = "text-right">
           <p style="font-size:18px;">A propos
-            <img src="../login.png" class="card-img" style="width:50px" alt="logo">
+            <img src="../images/login.png" class="card-img" style="width:50px" alt="logo">
 
-            <a href="../index2.php"><img src="../logout.png" class="card-img" style="width:50px" alt="logo"></a>
+            <a href="../index2.php"><img src="../images/logout.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>

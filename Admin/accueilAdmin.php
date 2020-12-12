@@ -31,7 +31,7 @@ if(!isset($_SESSION["login"])){
           <table>
             <tr>
               <td>
-                <a href="accueilAdmin"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
+                <a href="accueilAdmin"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
                 <p style="font-size:30px;">Administrateur</p>
@@ -41,15 +41,15 @@ if(!isset($_SESSION["login"])){
         </td>
         <td class = "text-right">
           <p style="font-size:18px;">A propos
-            <img src="../login.png" class="card-img" style="width:50px" alt="logo">
+            <img src="../images/login.png" class="card-img" style="width:50px" alt="logo">
 
-            <a href="../index2.php"><img src="../logout.png" class="card-img" style="width:50px" alt="logo"></a>
+            <a href="../index2.php"><img src="../images/logout.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>
   </table>
 
-  <div class="container" >
+  <div class="container" class="bg-dark text-white">
       <div class="row">
         <div class="col-sm">Gérer les utilisateurs</div>
         <div class="col-sm">Bonjour Administrateur </div>

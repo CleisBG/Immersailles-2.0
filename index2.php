@@ -32,7 +32,7 @@ session_start ();
 							<table>
 								<tr>
 									<td>
-										<img src="logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo">
+										<img src="images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo">
 									</td>
 									<td>
 										<p style="font-size:30px;">Immersailles</p>
@@ -42,8 +42,8 @@ session_start ();
 						</td>
 						<td class = "text-right">
 							<p style="font-size:18px;">A propos
-								<a href="connexion.php"><img src="login.png" class="card-img" style="width:50px" alt="logo"></a>
-								<img src="logout.png" class="card-img" style="width:50px" alt="logo">
+								<a href="connexion.php"><img src="images/login.png" class="card-img" style="width:50px" alt="logo"></a>
+								<img src="images/logout.png" class="card-img" style="width:50px" alt="logo">
 							</p>
 						</td>
 				</tr>
@@ -69,8 +69,7 @@ session_start ();
 	});
 
 	var greenIcon = L.icon({
-    iconUrl: 'marker.png',
-    shadowUrl: 'leaf-shadow.png',
+    iconUrl: 'images/marker.png',
 
     iconSize:     [38, 50], // size of the icon
     iconAnchor:   [19, 50], // point of the icon which will correspond to marker's location
@@ -87,7 +86,7 @@ session_start ();
 	};
 
 	var bounds = [xy(0, 0), xy(6507, 2319)];
-	var image = L.imageOverlay('plan_versailles.png', bounds).addTo(map);
+	var image = L.imageOverlay('images/plan_versailles.png', bounds).addTo(map);
 
 	var sol      = xy(3253, 1756);
 	var mizar    = xy( 41.6, 130.1);

@@ -21,7 +21,7 @@ if(!isset($_SESSION["login"])){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <title>This girl is on fire</title>
+    <title>Gestion Markers</title>
   </head>
 
 <body>
@@ -31,19 +31,19 @@ if(!isset($_SESSION["login"])){
           <table>
             <tr>
               <td>
-                <a href="accueilContributeur"><img src="../logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
+                <a href="accueilContributeur"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Immersailles</p>
+                <p style="font-size:30px;">Gestion des markers</p>
               </td>
             </tr>
         </table>
         </td>
         <td class = "text-right">
           <p style="font-size:18px;">A propos
-            <img src="../login.png" class="card-img" style="width:50px" alt="logo">
+            <img src="../images/login.png" class="card-img" style="width:50px" alt="logo">
 
-            <a href="../index2.php"><img src="../logout.png" class="card-img" style="width:50px" alt="logo"></a>
+            <a href="../index2.php"><img src="../images/logout.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>
