@@ -62,24 +62,19 @@ if(!isset($_SESSION["login"])){
       <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
     </div>
     <div class="col-sm-9">
-      <p class="text-danger"><b>Il n'est pas possible de supprimer un niveau.</b></p>
-    <h2>Niveaux</h2>
-    <table class="table">
-        <tr>
-          <th scope="row">1</th>
-          <td><button class="btn btn-dark">Supprimer</button></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td><button class="btn btn-dark">Supprimer</button></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td><button class="btn btn-dark">Supprimer</button></td>
-        </tr>
+      <p class="text-danger"><b>Il n'est pas possible d'ajouter le niveau.</b></p>
+    <h2>Niveau</h2>
+    <div class="input-group mb-3">
+      <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Niveau</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <h2>Ajouter un plan</h2>
+    <div class="input-group">
+  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+  <button class="btn btn-dark" type="button" id="inputGroupFileAddon04">Valider</button>
+</div>
     </table>
-    <a href="ajoutNiveauAdmin.php"><button class="btn btn-dark m-4">Ajouter un niveau</button></br></a>
-    <a href="niveauxAdmin.php"><button class="btn btn-dark m-4">Valider</button></a>
+    <a href="niveauxAdmin.php"><button class="btn btn-dark m-4">Ajouter</button></a>
   </div>
   </div>
 

@@ -5,6 +5,13 @@ if(!isset($_SESSION["login"])){
     header("location: connexion.php");
     exit();
   }
+
+  $results_admin=$dbh->query("SELECT `username`, `motDePasse` FROM `profil` p, `administrateur` a WHERE p.idProfil = a.idProfil");
+
+  $ligne_admin = $results_admin->fetch();
+  $login_admin = $ligne_admin['username'];
+  $pwd_admin = $ligne_admin['motDePasse'];
+
 ?>
 <!doctype html>
 <html lang="en">

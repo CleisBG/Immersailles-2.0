@@ -8,14 +8,14 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
 
   if (!(empty($login)) && !(empty($mdp))) {
 
-// identifiants administrateur
+// récupère identifiants administrateur
     $results_admin=$dbh->query("SELECT `username`, `motDePasse` FROM `profil` p, `administrateur` a WHERE p.idProfil = a.idProfil");
 
     $ligne_admin = $results_admin->fetch();
     $login_admin = $ligne_admin['username'];
     $pwd_admin = $ligne_admin['motDePasse'];
 
-// identifiants contributeur
+// récupère identifiants contributeur
     $results_contrib=$dbh->query("SELECT `username`, `motDePasse` FROM `profil` p, `contributeur` c WHERE p.idProfil = c.idProfil");
 
     $ligne_contrib = $results_contrib->fetch();
@@ -57,7 +57,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Envoyer') {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Css/style.css">
 
     <title>Connexion</title>
 </head>
