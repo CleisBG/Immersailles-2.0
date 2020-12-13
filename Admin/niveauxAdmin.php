@@ -49,7 +49,7 @@ if(!isset($_SESSION["login"])){
     </tr>
   </table>
 
-  <div class="row">
+  <div class="row w-100">
     <div class="col-sm-3 bg-dark">
       <a href="utilisateurAdmin.php"><button class="btn btn-outline-light m-4">Gérer les utilisateurs</button></a></br>
 
@@ -61,6 +61,23 @@ if(!isset($_SESSION["login"])){
 
       <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
     </div>
+    <div class="col-sm-9">
+    <h2>Années</h2>
+    <table class="table">
+        <tr>
+          <th scope="row">1789</th>
+          <td><a href="nivAdmin.php"><button class="btn btn-dark">Gérer les niveaux</button></a></td>
+        </tr>
+        <tr>
+          <th scope="row">1982</th>
+          <td><button class="btn btn-dark" disabled>Gérer les niveaux</button></td>
+        </tr>
+        <tr>
+          <th scope="row">2003</th>
+          <td><button class="btn btn-dark" disabled>Gérer les niveaux</button></td>
+        </tr>
+    </table>
+  </div>
   </div>
 
 
@@ -74,7 +91,7 @@ if(!isset($_SESSION["login"])){
             <div class="row">
                 <div class="col-sm">blabla</div>
                 <div class="col-sm">blablabla</div>
-                <div class="col-sm"><a class="text-white" href="https://bitbucket.org/EdetRo/immersailles/src/master/">Lien Git</a></div>
+                <div class="col-sm"><a class="text-white" href="https://github.com/CleisBG/Immersailles-2.0.git">Lien Git</a></div>
               </div>
               <div class="row">
                 <div class="col-sm"></div>

@@ -49,7 +49,7 @@ if(!isset($_SESSION["login"])){
     </tr>
   </table>
 
-  <div class="row">
+  <div class="row w-100">
     <div class="col-sm-3 bg-dark">
       <button class="btn btn-outline-light m-4" disabled>Gérer les utilisateurs</button></br>
 
@@ -74,7 +74,7 @@ if(!isset($_SESSION["login"])){
             <div class="row">
                 <div class="col-sm">blabla</div>
                 <div class="col-sm">blablabla</div>
-                <div class="col-sm"><a class="text-white" href="https://bitbucket.org/EdetRo/immersailles/src/master/">Lien Git</a></div>
+                <div class="col-sm"><a class="text-white" href="https://github.com/CleisBG/Immersailles-2.0.git">Lien Git</a></div>
               </div>
               <div class="row">
                 <div class="col-sm"></div>
