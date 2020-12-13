@@ -21,7 +21,7 @@ if(!isset($_SESSION["login"])){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <title>Gestion Dates</title>
+    <title>Ajout Dates</title>
   </head>
 
 <body>
@@ -62,7 +62,7 @@ if(!isset($_SESSION["login"])){
       <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
     </div>
     <div class="col-sm-9">
-      <p class="text-danger"><b>Il n'est pas possible de supprimer ni d'ajouter une année.</b></p>
+      <p class="text-danger"><b>Il n'est pas possible de supprimer une année.</b></p>
     <h2>Années</h2>
     <table class="table">
         <tr>
@@ -78,10 +78,7 @@ if(!isset($_SESSION["login"])){
           <td><button class="btn btn-dark">Supprimer</button></td>
         </tr>
     </table>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Nouvelle année" aria-label="Nouvelle année" aria-describedby="button-addon2">
-      <button class="btn btn-dark" type="button" id="button-addon2">Ajouter</button>
-</div>
+    <a href="ajoutDateAdmin.php"><button class="btn btn-dark m-4">Ajouter un niveau</button></a>
   </div>
   </div>
 
