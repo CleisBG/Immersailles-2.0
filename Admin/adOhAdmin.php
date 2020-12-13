@@ -34,7 +34,7 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilAdmin"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Objets Historiques sur les markers</p>
+                <p style="font-size:30px;">Ajout d'objet historique</p>
               </td>
             </tr>
         </table>
@@ -63,19 +63,17 @@ if(!isset($_SESSION["login"])){
     </div>
   </div>
   <div class="col-sm-9">
-    <p class="text-danger"><b>Il n'est pas possible de supprimer un objet historique.</b></p>
-  <h2>Objets Historiques</h2>
-  <table class="table">
-      <tr>
-        <th scope="row">Louis XIV</th>
-        <td><button class="btn btn-dark">Supprimer</button></td>
-      </tr>
-      <tr>
-        <th scope="row">Fauteuil de Louis XIV</th>
-        <td><button class="btn btn-dark">Supprimer</button></td>
-      </tr>
-  </table>
-  <a href="adOhAdmin.php"><button class="btn btn-dark m-4">Ajouter un objet historique</button></a>
+    <p class="text-danger"><b>Il n'est pas possible d'ajouter objet historique.</b></p>
+    <h2>Nouvel Objet Historique</h2>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Nom de l'Objet historique</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Identifiant WikiData</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <a href="ohAdmin.php"><button class="btn btn-dark m-4">Ajouter</button></a>
 </div>
 
 </div>
