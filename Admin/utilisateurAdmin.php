@@ -51,15 +51,15 @@ if(!isset($_SESSION["login"])){
 
   <div class="row">
     <div class="col-sm">
-      <button class="btn btn-dark m-4">Gérer les utilisateurs</button></br>
+      <button class="btn btn-dark m-4" disabled>Gérer les utilisateurs</button></br>
 
-      <button class="btn btn-dark m-4">Gestion des "époques"/dates</button></br>
+      <a href="datesAdmin.php"><button class="btn btn-dark m-4">Gestion des "époques"/dates</button></a></br>
 
-      <button class="btn btn-dark m-4">Gestion des niveaux associés à une "époque"</button></br>
+      <a href="niveauxAdmin.php"><button class="btn btn-dark m-4">Gestion des niveaux associés à une "époque"</button></a></br>
 
       <a href="markerAdmin.php"><button class="btn btn-dark m-4">Gestion des markers sur une map</button></a></br>
 
-      <button class="btn btn-dark m-4">Données ouvertes sur les markers</button>
+      <a href="donneesAdmin.php"><button class="btn btn-dark m-4">Données ouvertes sur les markers</button></a>
     </div>
   </div>
 
