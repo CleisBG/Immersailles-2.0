@@ -49,23 +49,23 @@ if(!isset($_SESSION["login"])){
     </tr>
   </table>
 
-  <div class="container" >
-      <div class="row">
-        <div class="col-sm">Gérer les utilisateurs</div>
-        <div class="col-sm">Bonjour Contributeur</div>
+  <div style="background-image: url('http://www.chateauversailles.fr/sites/default/files/styles/visuel_principal_home/public/visuels_principaux/accueil_tg_ete.jpg');">
+      <div class="row w-100">
+        <div class="col-sm-3 bg-dark">
+          <button class="btn btn-outline-light m-4" disabled>Gérer les utilisateurs</button></br>
+
+          <button class="btn btn-outline-light m-4" disabled>Gestion des "époques"/dates</button></br>
+
+          <button class="btn btn-outline-light m-4" disabled>Gestion des niveaux associés à une "époque"</button></br>
+
+          <a href="markerContributeur.php"><button class="btn btn-outline-light m-4">Gestion des markers sur une map</button></a></br>
+
+          <a href="ohContributeur.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
+        </div>
+        <div class="col-sm-9"><b>Bonjour Contributeur</b>
+        <p class="text-danger"><b>La plupart des fonctionnalités sont visibles mais ne font rien.</b></p></div>
       </div>
-      <div class="row">
-          <div class="col-sm">Gestion des "époques"/dates</div>
-        </div>
-        <div class="row">
-          <div class="col-sm">Gestion des niveaux associés à une "époque"</div>
-        </div>
-        <div class="row">
-          <a href="markerContributeur.php"><div class="col-sm">Gestion des markers sur une map</div></a>
-        </div>
-        <div class="row">
-          <div class="col-sm">Données ouvertes sur les markers :</div>
-        </div>
+
     </div>
 
 

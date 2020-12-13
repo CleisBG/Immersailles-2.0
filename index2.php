@@ -97,16 +97,8 @@ session_start ();
 	var image = L.imageOverlay('images/plan_versailles.png', bounds).addTo(map);
 
 	var sol      = xy(3253, 1756);
-	var mizar    = xy( 41.6, 130.1);
-	var kruegerZ = xy( 13.4,  56.5);
-	var deneb    = xy(218.7,   8.3);
 
 	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<a href="OH/Louis14.html"><img src="OH/Louis.jpg" class="card-img" style="width:30px" alt="logo">Louis XIV</a>');
-	L.marker(   mizar, {icon: greenIcon}).addTo(map).bindPopup(    'Mizar');
-	L.marker(kruegerZ, {icon: greenIcon}).addTo(map).bindPopup('Krueger-Z');
-	L.marker(   deneb, {icon: greenIcon}).addTo(map).bindPopup(    'Deneb');
-
-	// var travel = L.polyline([sol, deneb]).addTo(map);
 
 	map.setView(xy(120, 70), -3);
 

@@ -17,15 +17,12 @@ if(!isset($_SESSION["login"])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	  <link rel="stylesheet" href="Css/style.css">
 
-    <!-- Pour la Carte -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <!-- Bootstrap -->
     		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- OpenData -->
     		<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js" integrity="sha512-Hmp6qDy9imQmd15Ds1WQJ3uoyGCUz5myyr5ijainC1z+tP7wuXcze5ZZR3dF7+rkRALfNy7jcfgS5hH8wJ/2dQ==" crossorigin="anonymous"></script>
 
-    <title>Gestion Markers</title>
+    <title>Ajout Marker</title>
   </head>
 
 <body>
@@ -38,7 +35,7 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilContributeur"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Gestion des markers</p>
+                <p style="font-size:30px;">Ajouter un marker</p>
               </td>
             </tr>
         </table>
@@ -53,70 +50,46 @@ if(!isset($_SESSION["login"])){
     </tr>
   </table>
 
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    #map {
-      width: 100%;
-      height: 400px;
-    }
-  </style>
-
   <div class="row w-100">
-      <div class="col-sm-3 bg-dark">
-        <button class="btn btn-outline-light m-4" disabled>Gérer les utilisateurs</button></br>
+    <div class="col-sm-3 bg-dark">
+      <button class="btn btn-outline-light m-4" disabled>Gérer les utilisateurs</button></br>
 
-        <button class="btn btn-outline-light m-4" disabled>Gestion des "époques"/dates</button></br>
+      <button class="btn btn-outline-light m-4" disabled>Gestion des "époques"/dates</button></br>
 
-        <button class="btn btn-outline-light m-4" disabled>Gestion des niveaux associés à une "époque"</button></br>
+      <button class="btn btn-outline-light m-4" disabled>Gestion des niveaux associés à une "époque"</button></br>
 
-        <button class="btn btn-outline-light m-4" disabled>Gestion des markers sur une map</button></br>
+      <button class="btn btn-outline-light m-4" disabled>Gestion des markers sur une map</button></br>
 
-        <a href="ohContributeur.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
-      </div>
+      <a href="ohContributeur.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
+    </div>
+
     <div class="col-sm-9">
-      <p class="text-danger"><b>La fonctionnalité "Supprimer" est visible mais ne modifie rien.</b></p>
-			<div id="map"></div>
-      <a href="ajoutMarkerContributeur.php"><button class="btn btn-dark m-4">Ajouter un marker</button></a>
+      <p class="text-danger"><b>Il n'est pas possible d'ajouter un marker.</b></p>
+
+      <div class="input-group mb-3 m-4">
+        <label class="input-group-text bg-dark text-white" for="inputGroupSelect01">Nom du marker</label>
+        <select class="form-select" id="inputGroupSelect01">
+          <option selected>Choisir parmi les objets historiques existants n'ayant pas de marker...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+
+        <h2></br>Coordonnées du marker</h2>
+        <div class="input-group mb-3 m-4">
+          <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">X</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 m-4">
+          <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Y</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <a href="markerContributeur.php"><button class="btn btn-dark m-4">Ajouter le marker</button></a>
 		</div>
   </div>
 
-  <script>
-  	var map = L.map('map', {
-  		crs: L.CRS.Simple,
-  		minZoom: -5
-  	});
-
-  	var greenIcon = L.icon({
-      iconUrl: '../images/marker.png',
-
-      iconSize:     [38, 50], // size of the icon
-      iconAnchor:   [19, 50], // point of the icon which will correspond to marker's location
-      popupAnchor:  [0, -47] // point from which the popup should open relative to the iconAnchor
-  });
-
-  	var yx = L.latLng;
-
-  	var xy = function(x, y) {
-  		if (L.Util.isArray(x)) {    // When doing xy([x, y]);
-  			return yx(x[1], x[0]);
-  		}
-  		return yx(y, x);  // When doing xy(x, y);
-  	};
-
-  	var bounds = [xy(0, 0), xy(6507, 2319)];
-  	var image = L.imageOverlay('../images/plan_versailles.png', bounds).addTo(map);
-
-  	var sol      = xy(3253, 1756);
-
-  	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<b>Louis XIV</b><li><a href="infoMarkerContributeur.php">Informations</a></li><li><a href="editMarkerContributeur.php">Editer</a></li><li>Supprimer</li>');
-
-
-  	map.setView(xy(120, 70), -3);
-
-  </script>
 
 
 <footer class="w-100 bg-dark text-white">

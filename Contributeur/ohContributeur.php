@@ -21,7 +21,7 @@ if(!isset($_SESSION["login"])){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <title>Accueil Administrateur</title>
+    <title>Objets Historiques</title>
   </head>
 
 <body>
@@ -34,7 +34,7 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilAdmin"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Administrateur</p>
+                <p style="font-size:30px;">Objets Historiques sur les markers</p>
               </td>
             </tr>
         </table>
@@ -42,30 +42,27 @@ if(!isset($_SESSION["login"])){
         <td class = "text-right">
           <p style="font-size:18px;">A propos
             <img src="../images/login.png" class="card-img" style="width:50px" alt="logo">
+
             <a href="../index2.php"><img src="../images/logout.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>
   </table>
 
-  <div style="background-image: url('http://www.chateauversailles.fr/sites/default/files/styles/visuel_principal_home/public/visuels_principaux/accueil_tg_ete.jpg');">
-      <div class="row w-100">
-        <div class="col-sm-3 bg-dark">
-          <a href="utilisateurAdmin.php"><button class="btn btn-outline-light m-4">Gérer les utilisateurs</button></a></br>
+  <div class="row w-100">
+    <div class="col-sm-3 bg-dark">
+        <button class="btn btn-outline-light m-4" disabled>Gérer les utilisateurs</button></br>
 
-          <a href="datesAdmin.php"><button class="btn btn-outline-light m-4">Gestion des "époques"/dates</button></a></br>
+        <button class="btn btn-outline-light m-4" disabled>Gestion des "époques"/dates</button></br>
 
-          <a href="niveauxAdmin.php"><button class="btn btn-outline-light m-4">Gestion des niveaux associés à une "époque"</button></a></br>
+        <button class="btn btn-outline-light m-4" disabled>Gestion des niveaux associés à une "époque"</button></br>
 
-          <a href="markerAdmin.php"><button class="btn btn-outline-light m-4">Gestion des markers sur une map</button></a></br>
+        <a href="markerContributeur.php"><button class="btn btn-outline-light m-4">Gestion des markers sur une map</button></a></br>
 
-          <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
-        </div>
-        <div class="col-sm-9"><b>Bonjour Administrateur</b>
-        <p class="text-danger"><b>La plupart des fonctionnalités sont visibles mais ne font rien.</b></p></div>
-      </div>
+        <button class="btn btn-outline-light m-4" disabled>Objets Historiques sur les markers</button>
+  </div>
 
-    </div>
+</div>
 
 
 <footer class="w-100 bg-dark text-white">
