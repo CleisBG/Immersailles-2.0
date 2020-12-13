@@ -59,8 +59,9 @@ if(!isset($_SESSION["login"])){
 
       <a href="markerAdmin.php"><button class="btn btn-outline-light m-4">Gestion des markers sur une map</button></a></br>
 
-      <a href="donneesAdmin.php"><button class="btn btn-outline-light m-4">Données ouvertes sur les markers</button></a>
+      <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
     </div>
+    <div class="col-sm-9"></div>
   </div>
 
 </div>

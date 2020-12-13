@@ -55,12 +55,20 @@ session_start ();
 			margin: 0;
 		}
 		#map {
-			width: 75%;
+			width: 100%;
 			height: 400px;
 		}
 	</style>
 
-<div id="map"></div>
+	<div class="row w-100 bg-dark text-white">
+	</br>
+		<div class="col-sm-9">
+			<div id="map"></div>
+		</div>
+		<div class="col-sm-3"><b>Bonjour </br>
+		Cliquez sur un marker <img src="images/marker.png" class="card-img" style="width:50px" alt="logo"> </br>
+		puis sur son pop-up afin de consulter l'objet historique auquel il est associé.</b></div>
+	</div>
 
 <script>
 	var map = L.map('map', {

@@ -49,7 +49,7 @@ if(!isset($_SESSION["login"])){
   </table>
 
   <div style="background-image: url('http://www.chateauversailles.fr/sites/default/files/styles/visuel_principal_home/public/visuels_principaux/accueil_tg_ete.jpg');">
-      <div class="row">
+      <div class="row w-100">
         <div class="col-sm-3 bg-dark">
           <a href="utilisateurAdmin.php"><button class="btn btn-outline-light m-4">Gérer les utilisateurs</button></a></br>
 
@@ -59,7 +59,7 @@ if(!isset($_SESSION["login"])){
 
           <a href="markerAdmin.php"><button class="btn btn-outline-light m-4">Gestion des markers sur une map</button></a></br>
 
-          <a href="donneesAdmin.php"><button class="btn btn-outline-light m-4">Données ouvertes sur les markers</button></a>
+          <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
         </div>
         <div class="col-sm-9"><b>Bonjour Administrateur</b></div>
       </div>

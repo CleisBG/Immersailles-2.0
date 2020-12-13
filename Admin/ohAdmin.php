@@ -21,7 +21,7 @@ if(!isset($_SESSION["login"])){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <title>Gestion Niveaux</title>
+    <title>Objets Historiques</title>
   </head>
 
 <body>
@@ -34,7 +34,7 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilAdmin"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Gestion des niveaux associés</p>
+                <p style="font-size:30px;">Objets Historiques sur les markers</p>
               </td>
             </tr>
         </table>
@@ -55,13 +55,15 @@ if(!isset($_SESSION["login"])){
 
       <a href="datesAdmin.php"><button class="btn btn-outline-light m-4">Gestion des "époques"/dates</button></a></br>
 
-      <button class="btn btn-outline-light m-4" disabled>Gestion des niveaux associés à une "époque"</button></br>
+      <a href="niveauxAdmin.php"><button class="btn btn-outline-light m-4">Gestion des niveaux associés à une "époque"</button></a></br>
 
       <a href="markerAdmin.php"><button class="btn btn-outline-light m-4">Gestion des markers sur une map</button></a></br>
 
-      <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
+      <button class="btn btn-outline-light m-4" disabled>Objets Historiques sur les markers</button>
     </div>
   </div>
+
+</div>
 
 
 <footer class="w-100 bg-dark text-white">

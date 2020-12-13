@@ -17,15 +17,12 @@ if(!isset($_SESSION["login"])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	  <link rel="stylesheet" href="Css/style.css">
 
-    <!-- Pour la Carte -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <!-- Bootstrap -->
     		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- OpenData -->
     		<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js" integrity="sha512-Hmp6qDy9imQmd15Ds1WQJ3uoyGCUz5myyr5ijainC1z+tP7wuXcze5ZZR3dF7+rkRALfNy7jcfgS5hH8wJ/2dQ==" crossorigin="anonymous"></script>
 
-    <title>Gestion Markers</title>
+    <title>Information Marker</title>
   </head>
 
 <body>
@@ -38,7 +35,7 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilAdmin"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Gestion des markers</p>
+                <p style="font-size:30px;">Information sur le marker</p>
               </td>
             </tr>
         </table>
@@ -53,17 +50,6 @@ if(!isset($_SESSION["login"])){
     </tr>
   </table>
 
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    #map {
-      width: 100%;
-      height: 400px;
-    }
-  </style>
-
   <div class="row w-100">
     <div class="col-sm-3 bg-dark">
       <a href="utilisateurAdmin.php"><button class="btn btn-outline-light m-4">Gérer les utilisateurs</button></a></br>
@@ -76,55 +62,86 @@ if(!isset($_SESSION["login"])){
 
       <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
     </div>
+
     <div class="col-sm-9">
-      <p class="text-danger"><b>La fonctionnalité "Supprimer" est visible mais ne modifie rien.</b></p>
-			<div id="map"></div>
-      <a href="ajoutMarkerAdmin.php"><button class="btn btn-dark m-4">Ajouter un marker</button></a>
-		</div>
-  </div>
+      <div class="container">
+        <div class="row">
+          <div1 class="col-sm"></br>
+            <img id='image'>
+            <a href="markerAdmin.php"><button class="btn btn-dark m-4">Retour</button></a>
+          </div1>
+          <div1 class="col-sm" align="center">
+                <table class="table">
+                  <tr>
+                    <h1 id='name' class="bg-dark text-white"></h1></br>
+                  </tr>
+                  <tr class="bg-dark text-white">
+                    <td>
+                      <p id='description'></p>
+                      <p id='birth'></p>
+                      <p id='death'></p>
+                    </td>
+                  </tr>
+                </table>
+          </div1>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
 
   <script>
-  	var map = L.map('map', {
-  		crs: L.CRS.Simple,
-  		minZoom: -5
-  	});
+        const idWiki = 'Q7742';
+        const name = document.querySelector('#name');
+        const birth = document.querySelector('#birth');
+        const death = document.querySelector('#death');
+        const description = document.querySelector('#description');
+        const image = document.querySelector('#image');
 
-  	var greenIcon = L.icon({
-      iconUrl: '../images/marker.png',
+        const toDate = function(date) {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(date.substr(1, 10)).toLocaleDateString('fr-FR');
+        }
 
-      iconSize:     [38, 50], // size of the icon
-      iconAnchor:   [19, 50], // point of the icon which will correspond to marker's location
-      popupAnchor:  [0, -47] // point from which the popup should open relative to the iconAnchor
-  });
+        const getName = function(data) {
+            return data.claims.P1559[0].mainsnak.datavalue.value.text;
+        }
 
-  	var yx = L.latLng;
+        const getDescription = function(data) {
+            return data.descriptions.fr.value;
+        }
 
-  	var xy = function(x, y) {
-  		if (L.Util.isArray(x)) {    // When doing xy([x, y]);
-  			return yx(x[1], x[0]);
-  		}
-  		return yx(y, x);  // When doing xy(x, y);
-  	};
+        const getBirth = function(data) {
+            const date = data.claims.P569[0].mainsnak.datavalue.value.time;
+            return toDate(date);
+        }
 
-  	var bounds = [xy(0, 0), xy(6507, 2319)];
-  	var image = L.imageOverlay('../images/plan_versailles.png', bounds).addTo(map);
+        const getDeath = function(data) {
+            const date = data.claims.P570[0].mainsnak.datavalue.value.time;
+            return toDate(date);
+        }
 
-  	var sol      = xy(3253, 1756);
-  	var mizar    = xy( 41.6, 130.1);
-  	var kruegerZ = xy( 13.4,  56.5);
-  	var deneb    = xy(218.7,   8.3);
+        const getImageUrl = function(data, size=370) {
+            const imageUrl = data.claims.P18[0].mainsnak.datavalue.value.split(' ').join('_');
+            const md5Img = md5(imageUrl);
 
-  	L.marker(     sol, {icon: greenIcon}).addTo(map).bindPopup('<b>Louis XIV</b><li><a href="infoMarkerAdmin.php">Informations</a></li><li><a href="editMarkerAdmin.php">Editer</a></li><li>Supprimer</li>');
-  	L.marker(   mizar, {icon: greenIcon}).addTo(map).bindPopup(    'Mizar');
-  	L.marker(kruegerZ, {icon: greenIcon}).addTo(map).bindPopup('Krueger-Z');
-  	L.marker(   deneb, {icon: greenIcon}).addTo(map).bindPopup(    'Deneb');
+            const firstLetter = md5Img[0];
+            const twoFirstLetters = md5Img.substring(0, 2);
+            console.log(firstLetter, twoFirstLetters, md5Img);
+            return `https://upload.wikimedia.org/wikipedia/commons/thumb/${firstLetter}/${twoFirstLetters}/${imageUrl}/${size}px-${imageUrl}`;
+        }
 
-  	// var travel = L.polyline([sol, deneb]).addTo(map);
-
-  	map.setView(xy(120, 70), -3);
-
-  </script>
-
+        fetch(`https://www.wikidata.org/wiki/Special:EntityData/${idWiki}.json`)
+        .then(data => data.json())
+        .then(json => {
+            const data = json.entities[idWiki];
+            name.innerText = getName(data);
+            birth.innerText = "Date de naissance: " + getBirth(data);
+            death.innerText = "Date de décès: " +getDeath(data);
+            description.innerText = getDescription(data);
+            image.src = getImageUrl(data);
+        });
+    </script>
 
 <footer class="w-100 bg-dark text-white">
         <div class="container" >
