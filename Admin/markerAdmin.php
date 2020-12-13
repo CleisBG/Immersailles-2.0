@@ -49,24 +49,19 @@ if(!isset($_SESSION["login"])){
     </tr>
   </table>
 
-  <div class="container" >
-      <div class="row">
-        <div class="col-sm">Gérer les utilisateurs</div>
-        <div class="col-sm">Gestion des markers </div>
-      </div>
-      <div class="row">
-          <div class="col-sm">Gestion des "époques"/dates</div>
-        </div>
-        <div class="row">
-          <div class="col-sm">Gestion des niveaux associés à une "époque"</div>
-        </div>
-        <div class="row">
-          <div class="col-sm"><b>Gestion des markers sur une map</b></div>
-        </div>
-        <div class="row">
-          <div class="col-sm">Données ouvertes sur les markers :</div>
-        </div>
+  <div class="row">
+    <div class="col-sm">
+      <button class="btn btn-dark m-4">Gérer les utilisateurs</button></br>
+
+      <button class="btn btn-dark m-4">Gestion des "époques"/dates</button></br>
+
+      <button class="btn btn-dark m-4">Gestion des niveaux associés à une "époque"</button></br>
+
+      <a href="markerAdmin.php"><button class="btn btn-dark m-4">Gestion des markers sur une map</button></a></br>
+
+      <button class="btn btn-dark m-4">Données ouvertes sur les markers</button>
     </div>
+  </div>
 
 
 <footer class="w-100 bg-dark text-white">

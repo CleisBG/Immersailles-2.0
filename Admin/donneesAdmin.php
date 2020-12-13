@@ -21,7 +21,7 @@ if(!isset($_SESSION["login"])){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <title>Accueil Administrateur</title>
+    <title>Données Markers</title>
   </head>
 
 <body>
@@ -34,7 +34,7 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilAdmin"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Administrateur</p>
+                <p style="font-size:30px;">Données ouvertes sur les markers</p>
               </td>
             </tr>
         </table>
@@ -42,29 +42,26 @@ if(!isset($_SESSION["login"])){
         <td class = "text-right">
           <p style="font-size:18px;">A propos
             <img src="../images/login.png" class="card-img" style="width:50px" alt="logo">
+
             <a href="../index2.php"><img src="../images/logout.png" class="card-img" style="width:50px" alt="logo"></a>
           </p>
         </td>
     </tr>
   </table>
 
-  <div style="background-image: url('http://www.chateauversailles.fr/sites/default/files/styles/visuel_principal_home/public/visuels_principaux/accueil_tg_ete.jpg');">
-      <div class="row">
-        <div class="col-sm">
-          <button class="btn btn-dark m-4">Gérer les utilisateurs</button></br>
+  <div class="row">
+    <div class="col-sm">
+      <button class="btn btn-dark m-4">Gérer les utilisateurs</button></br>
 
-          <button class="btn btn-dark m-4">Gestion des "époques"/dates</button></br>
+      <button class="btn btn-dark m-4">Gestion des "époques"/dates</button></br>
 
-          <button class="btn btn-dark m-4">Gestion des niveaux associés à une "époque"</button></br>
+      <button class="btn btn-dark m-4">Gestion des niveaux associés à une "époque"</button></br>
 
-          <a href="markerAdmin.php"><button class="btn btn-dark m-4">Gestion des markers sur une map</button></a></br>
+      <a href="markerAdmin.php"><button class="btn btn-dark m-4">Gestion des markers sur une map</button></a></br>
 
-          <button class="btn btn-dark m-4">Données ouvertes sur les markers</button>
-        </div>
-        <div class="col-sm"><b>Bonjour Administrateur</b></div>
-      </div>
-
+      <button class="btn btn-dark m-4">Données ouvertes sur les markers</button>
     </div>
+  </div>
 
 
 <footer class="w-100 bg-dark text-white">
