@@ -34,7 +34,7 @@ if(!isset($_SESSION["login"])){
                 <a href="accueilAdmin"><img src="../images/logo_mini.png" class="card-img" style="width:100px;height:100px;" alt="logo"></a>
               </td>
               <td>
-                <p style="font-size:30px;">Gestion des utilisateurs</p>
+                <p style="font-size:30px;">Ajouter un utilisateur</p>
               </td>
             </tr>
         </table>
@@ -62,26 +62,30 @@ if(!isset($_SESSION["login"])){
       <a href="ohAdmin.php"><button class="btn btn-outline-light m-4">Objets Historiques sur les markers</button></a>
     </div>
     <div class="col-sm-9">
-      <p class="text-danger"><b>Il n'est pas possible de supprimer un utilisateur.</b></p>
-    <h2>Utilisateurs</h2>
+      <p class="text-danger"><b>Il n'est pas possible d'ajouter l'utilisateur.</b></p>
+    <h2>Utilisateur</h2>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Nom de l'utilisateur</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+    <!-- Bouton radio -->
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+      <label class="btn btn-dark" for="btnradio1">Contributeur</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+      <label class="btn btn-dark" for="btnradio3">Administrateur</label>
+    </div>
+
     <table class="table">
         <tr>
-          <th scope="row">Utilisateur 1</th>
-          <td><a href="editUtilAdmin.php"><button class="btn btn-dark">Modifier</button></a>
-            <button class="btn btn-dark">Supprimer</button></td>
+          <td align="middle"><button class="btn btn-dark">Suivi des connexions</button></a>
+            <button class="btn btn-dark">Générer un mot de passe</button></td>
         </tr>
         <tr>
-          <th scope="row">Utilisateur 2</th>
-          <td><a href="editUtilAdmin.php"><button class="btn btn-dark">Modifier</button></a>
-            <button class="btn btn-dark">Supprimer</button></td>
-        </tr>
-        <tr>
-          <th scope="row">Utilisateur 3</th>
-          <td><a href="editUtilAdmin.php"><button class="btn btn-dark">Modifier</button></a>
-            <button class="btn btn-dark">Supprimer</button></td>
+          <td align="middle"><a href="utilisateurAdmin.php"><button class="btn btn-dark">Ajouter l'utilisateur</button></td>
         </tr>
     </table>
-    <a href="ajoutUtilisateurAdmin.php"><button class="btn btn-dark">Ajouter utilisateur</button>
   </div>
   </div>
 
