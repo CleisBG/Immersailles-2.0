@@ -50,18 +50,18 @@ if(!isset($_SESSION["login"])){
 
   <div style="background-image: url('http://www.chateauversailles.fr/sites/default/files/styles/visuel_principal_home/public/visuels_principaux/accueil_tg_ete.jpg');">
       <div class="row">
-        <div class="col-sm">
-          <a href="utilisateurAdmin.php"><button class="btn btn-dark m-4">Gérer les utilisateurs</button></a></br>
+        <div class="col-sm-3 bg-dark">
+          <a href="utilisateurAdmin.php"><button class="btn btn-outline-light m-4">Gérer les utilisateurs</button></a></br>
 
-          <a href="datesAdmin.php"><button class="btn btn-dark m-4">Gestion des "époques"/dates</button></a></br>
+          <a href="datesAdmin.php"><button class="btn btn-outline-light m-4">Gestion des "époques"/dates</button></a></br>
 
-          <a href="niveauxAdmin.php"><button class="btn btn-dark m-4">Gestion des niveaux associés à une "époque"</button></a></br>
+          <a href="niveauxAdmin.php"><button class="btn btn-outline-light m-4">Gestion des niveaux associés à une "époque"</button></a></br>
 
-          <a href="markerAdmin.php"><button class="btn btn-dark m-4">Gestion des markers sur une map</button></a></br>
+          <a href="markerAdmin.php"><button class="btn btn-outline-light m-4">Gestion des markers sur une map</button></a></br>
 
-          <a href="donneesAdmin.php"><button class="btn btn-dark m-4">Données ouvertes sur les markers</button></a>
+          <a href="donneesAdmin.php"><button class="btn btn-outline-light m-4">Données ouvertes sur les markers</button></a>
         </div>
-        <div class="col-sm"><b>Bonjour Administrateur</b></div>
+        <div class="col-sm-9"><b>Bonjour Administrateur</b></div>
       </div>
 
     </div>
